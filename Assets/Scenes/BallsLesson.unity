@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _winConditionIndex: 1
-  _ballColorForWin: 1
+  _ballColorForWin: 2
   _winParticles: {fileID: 723448651543537990, guid: dfabe21b1664d9d4db8d3adeb4ed4149, type: 3}
   _balls:
   - {fileID: 1668195261}
