@@ -14,6 +14,8 @@ public class OneColorBallsBrokenWinCondition : IWinCondition
 
     public bool IsPlayerWin()
     {
-        return _balls.Count(ball => ball.Color == _color && ball.gameObject.activeSelf) == 0;
+        int correctColorBalls = _balls.Count(ball => ball.Color == _color && ball.gameObject.activeSelf);
+
+        return correctColorBalls == 0;
     }
 }
