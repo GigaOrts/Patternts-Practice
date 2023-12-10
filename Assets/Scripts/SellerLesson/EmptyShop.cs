@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class EmptyShop : IShop
+public class EmptyShop : Shop
 {
-    public void Show()
+    public override void Show()
     {
         Debug.Log("No items to sell...");
     }

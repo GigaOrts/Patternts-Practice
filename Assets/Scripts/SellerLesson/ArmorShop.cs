@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ArmorShop : IShop
+public class ArmorShop : Shop
 {
-    public void Show()
+    public override void Show()
     {
         Debug.Log("Here is some stuff: Plate, Helmet, Shield, Boots ...");
     }
