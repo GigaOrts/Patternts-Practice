@@ -1,24 +1,25 @@
+using System;
 using UnityEngine;
 
-public abstract class Gun : IGun
+public abstract class Gun
 {
     private readonly int _maxAmmoCount = 100;
-    private int AmmoCount;
-
-    protected int AmmoPerShot;
+    protected readonly int AmmoPerShot;
+    
+    private int _ammoCount;
 
     public Gun(int ammoPerShot)
     {
-        AmmoCount = _maxAmmoCount;
         AmmoPerShot = ammoPerShot;
+        _ammoCount = _maxAmmoCount;
     }
 
-    private bool CanShoot => AmmoCount >= AmmoPerShot;
+    private bool CanShoot => _ammoCount >= AmmoPerShot;
 
     public void Shoot()
     {
         if (CanShoot == false)
-            return;
+            throw new InvalidOperationException();
 
         SpawnBullets();
         UpdateAmmo();
@@ -31,7 +32,7 @@ public abstract class Gun : IGun
 
     private void UpdateAmmo()
     {
-        AmmoCount -= AmmoPerShot;
-        Debug.Log($"Bullets: {AmmoCount} / {_maxAmmoCount} || -{AmmoPerShot}");
+        _ammoCount -= AmmoPerShot;
+        Debug.Log($"Bullets: {_ammoCount} / {_maxAmmoCount} || -{AmmoPerShot}");
     }
 }

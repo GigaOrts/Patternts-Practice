@@ -1,7 +1,6 @@
-
 public class InfiniteBulletsGun : Gun
 {
-    public InfiniteBulletsGun() : base(0)
+    public InfiniteBulletsGun() : base(GunConfig.InfiniteGunAmmoPerShot)
     {
     }
 }

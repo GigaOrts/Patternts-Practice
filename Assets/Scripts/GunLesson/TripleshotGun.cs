@@ -1,7 +1,7 @@
 
 public class TripleshotGun : Gun
 {
-    public TripleshotGun() : base(3)
+    public TripleshotGun() : base(GunConfig.TripleshotGunAmmoPerShot)
     {
     }
 

@@ -1,6 +1,6 @@
 public class DefaultGun : Gun
 {
-    public DefaultGun() : base(1)
+    public DefaultGun() : base(GunConfig.DefaultGunAmmoPerShot)
     {
     }
 }
