@@ -1,13 +1,18 @@
+﻿using System;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     [SerializeField] private BallColor _color;
 
-    public BallColor Color => _color;
+    public event Action Clicked;
 
-    private void OnMouseDown()
+    public BallColor CurrentBallColor => _color;
+
+    public void Deactivate()
     {
         gameObject.SetActive(false);
+        
+        Clicked?.Invoke();
     }
 }

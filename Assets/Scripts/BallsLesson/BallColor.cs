@@ -1,6 +1,6 @@
-public enum BallColor
+﻿public enum BallColor
 {
+    White,
     Red,
-    Green,
-    White
+    Green
 }
